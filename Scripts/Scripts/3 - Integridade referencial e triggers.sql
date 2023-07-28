@@ -117,6 +117,7 @@ BEGIN
                 ON inserted.[PurchaseOrderID] = [Purchasing].[PurchaseOrderDetail].[PurchaseOrderID]
 
 
+END;
 
 
 
@@ -124,8 +125,9 @@ BEGIN
 
 
 CREATE TRIGGER [HumanResources].[dEmployee] ON [HumanResources].[Employee] 
-INSTEAD OF DELETE NOT FOR REPLICATION AS 
+INSTEAD OF DELETE AS
 BEGIN
+   
     BEGIN
         RAISERROR
             (N'Employees cannot be deleted. They can only be marked as not current.', -- Message
@@ -135,10 +137,10 @@ BEGIN
         -- Rollback any active or uncommittable transactions
         IF @@TRANCOUNT > 0
         BEGIN
-            ROLLBACK TRANSACTION;
+            ROLLBACK TRANSACTION
+		END
 
-
-						
+END;						
 
 
 
