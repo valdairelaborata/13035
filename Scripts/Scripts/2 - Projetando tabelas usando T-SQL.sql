@@ -27,6 +27,7 @@ CREATE TABLE [dbo].[TabelaTeste](
 GO
 
 
+
 --alter table [dbo].[TabelaTeste]
 --add Ativo char(1) not null default('S')
 
