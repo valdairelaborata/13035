@@ -38,10 +38,22 @@
           <FullPath>3 - Integridade referencial e triggers.sql</FullPath>
         </FileNode>
         <FileNode Name="4 - Criando indices.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-E8C9T804\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-E8C9T804\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>4 - Criando indices.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5a - Escrevendo queries - Consultas e filtros.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-E8C9T804\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-E8C9T804\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>5a - Escrevendo queries - Consultas e filtros.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5b - Escrevendo queries - Agrupar e resumir dados.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-E8C9T804\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-E8C9T804\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>5b - Escrevendo queries - Agrupar e resumir dados.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

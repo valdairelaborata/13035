@@ -42,3 +42,48 @@ GROUP BY GROUPING SETS(T.[Group], T.CountryRegionCode, S.Name, H.SalesPersonID)
 
 
 
+SELECT P.Name, P.ListPrice, PSC.Name Category, 
+RANK() OVER(PARTITION BY PSC.Name ORDER BY P.ListPrice DESC) AS PriceRank
+FROM Production.Product P
+JOIN Production.ProductSubcategory PSC
+ON P.ProductSubcategoryID = PSC.ProductSubcategoryID
+
+
+SELECT P.Name, P.ListPrice, PSC.Name Category, 
+DENSE_RANK() OVER(PARTITION BY PSC.Name ORDER BY P.ListPrice DESC) AS PriceRank
+FROM Production.Product P
+JOIN Production.ProductSubcategory PSC
+ON P.ProductSubcategoryID = PSC.ProductSubcategoryID
+
+SELECT ROW_NUMBER() OVER(PARTITION BY PSC.Name ORDER BY P.ListPrice) AS Row,
+PSC.Name Category, P.Name Product, P.ListPrice
+FROM Production.Product P
+JOIN Production.ProductSubcategory PSC
+ON P.ProductSubcategoryID = PSC.ProductSubcategoryID
+
+
+SELECT NTILE(8) OVER (PARTITION BY PC.Name ORDER BY ListPrice)
+AS PriceBand, PC.Name Category, P.Name Product, P.ListPrice
+FROM Production.Product P
+JOIN Production.ProductSubcategory PSC ON P.ProductSubcategoryID = PSC.ProductSubcategoryID
+JOIN Production.ProductCategory PC ON PSC.ProductCategoryID = PC.ProductCategoryID
+
+
+
+
+
+
+
+
+SELECT Name, [Black], [Blue], [Red]
+FROM (
+	SELECT Name, Color
+	FROM Production.Product
+	WHERE Name LIKE '%helmet%'
+) as Consulta
+PIVOT  
+(  
+  COUNT(Color) 
+  FOR Color IN ([Black], [Blue], [Red])  
+) AS ConsultaPivot;  
+
