@@ -55,6 +55,18 @@
           <AssociatedConnUserName />
           <FullPath>5b - Escrevendo queries - Agrupar e resumir dados.sql</FullPath>
         </FileNode>
+        <FileNode Name="5c - Escrevendo queries - Joins.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-E8C9T804\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-E8C9T804\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>5c - Escrevendo queries - Joins.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5d - Escrevendo queries - Subconsultas.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-E8C9T804\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-E8C9T804\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>5d - Escrevendo queries - Subconsultas.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
