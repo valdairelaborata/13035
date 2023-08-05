@@ -71,6 +71,23 @@ DROP FUNCTION dbo.fEmployeeByTitle;
 
 
 
+CREATE OR ALTER PROCEDURE Person.usp_GetPersonName @NamePrefix char(1)
+AS
+BEGIN
+SELECT BusinessEntityID, FirstName, LastName
+FROM Person.Person
+WHERE FirstName LIKE @NamePrefix + '%'
+ORDER BY FirstName
+END;
+
+
+EXECUTE Person.usp_GetPersonName 'A';
+
+DROP PROCEDURE Person.usp_GetPersonName;
+
+
+
+
 
 
 
